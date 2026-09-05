@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Python outputs
+*.npy
+*.npz
+*.pkl
+*.joblib
+
+# Experiment outputs
+results/*.csv
+results/*.json
+
+# Medical imaging data
+*.dcm
+*.dicom
+*.nii
+*.nii.gz
+
+# Local datasets
+data/
+datasets/

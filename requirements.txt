@@ -1,0 +1,14 @@
+numpy
+pydicom
+scipy
+lungmask
+opencv-python
+tqdm
+torch
+torchvision
+scikit-learn
+scikit-image
+PyWavelets
+matplotlib
+seaborn
+pandas
