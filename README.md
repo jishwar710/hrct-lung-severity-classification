@@ -33,6 +33,34 @@ image preprocessing are performed before the classification stage.
 The processed PNG images are organized patient-wise and are used for
 deep learning and handcrafted feature extraction experiments.
 
+## Dataset and Related Resources
+
+This project uses a labeled HRCT lung dataset organized into four severity categories:
+
+- Normal
+- Mild
+- Moderate
+- Severe
+
+The complete dataset is maintained in a separate repository because medical images and DICOM files are large and are not included directly in this code repository.
+
+### Related Repositories
+
+| Resource | Description |
+|----------|-------------|
+| [HRCT Lung Dataset](https://github.com/jishwar710/lung-extracted-ct-dataset) | Original and processed DICOM dataset containing extracted lung images |
+| [PNG Image Dataset](https://github.com/jishwar710/PNG_IMAGES) | PNG-converted lung images used for feature extraction and classification |
+
+### Dataset Usage
+
+1. Download or clone the required dataset repository.
+2. Organize the images according to the expected class structure.
+3. Update the dataset path in the Python scripts.
+4. Run the lung segmentation or feature extraction pipeline.
+5. Use the generated features for classification.
+
+> **Note:** The dataset is not included in this repository because of its size and medical-data considerations. Please verify the dataset's usage permissions before using it for research or redistribution.
+
 ## Methodology
 
 The overall workflow is:
