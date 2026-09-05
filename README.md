@@ -17,6 +17,55 @@ The objective is to study how different feature extraction and
 classification approaches contribute to the analysis of lung disease
 severity.
 
+## Project Pipeline
+
+The project follows the workflow below:
+
+```text
+DICOM CT Images
+      ↓
+Lung Extraction and Masking
+      ↓
+PNG Conversion and Cropping
+      ↓
+Deep Feature Extraction using ResNet50
+      +
+Handcrafted Feature Extraction
+      ↓
+Patient-Wise Feature Fusion
+      ↓
+Machine Learning Classification
+      ↓
+Disease Severity Prediction
+      ↓
+Performance Evaluation
+```
+
+## Code Documentation
+
+Detailed explanations of the major project files are available in the `docs/code-explanations/` directory.
+
+### Lung Extraction
+
+The lung extraction stage loads DICOM CT images, converts pixel values into Hounsfield Units, generates lung masks, refines the masks, and saves the processed lung regions.
+
+[Read the Lung Extraction Explanation](docs/code-explanations/lung_extraction_explained.md)
+
+### PNG Conversion
+
+The PNG conversion stage converts processed DICOM images into PNG format, applies intensity windowing, crops the lung region, resizes the images, and saves them for feature extraction.
+
+[Read the PNG Converter Explanation](docs/code-explanations/png_converter_explained.md)
+
+### Feature Fusion and Classification
+
+The Fusion stage extracts deep features using pretrained ResNet50 and handcrafted features such as statistical, texture, morphological, histogram, wavelet, and LBP features.
+
+The features are aggregated patient-wise, combined, and passed to a machine learning classifier for disease-severity prediction.
+
+[Read the Fusion and Classification Explanation](docs/code-explanations/fusion_explained.md)
+
+
 ## Dataset
 
 The dataset consists of 278 labeled HRCT cases organized into four
